@@ -25,6 +25,7 @@ Route::resource('categories', CategoryController::class);
 Route::resource('topics', TopicController::class);
 Route::resource('posts', PostController::class);
 Route::resource('users', UserController::class);
+Route::get('/users2', [UserController::class, 'index2']);
 Route::post('/users/{user}/change_permission', [UserController::class, 'changeAdminStatus']);
 Route::post('/topic/{topic}/status', [TopicController::class, 'changeStatus']);
 Route::get('/departments/subdepartments/categories', [DepartmentController::class, 'getDepartmentsSubdepartmentsCategories']);

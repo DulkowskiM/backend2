@@ -94,4 +94,8 @@ class UserController extends Controller
             'topics' => $topics
         ]);
     }
+    public function index2()
+    {
+        return User::select('id', 'name', 'created_at');
+    }
 }
